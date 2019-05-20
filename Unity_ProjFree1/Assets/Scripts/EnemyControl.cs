@@ -29,11 +29,16 @@ public class EnemyControl : MonoBehaviour{
 
     //moves the enemy forwards to given location point
     void Movement(){
-       // DetectionCheck();
+        print(DetectionCheck());
 
-        if (Vector3.Distance(transform.position, curPoint.position) <= 2){
-            PatrolDirection(PointId());
-        }
+		//if player is detected, go after the player else return to path
+		if(DetectionCheck()) {
+
+		} else {
+			if(Vector3.Distance(transform.position, curPoint.position) <= 2) {
+				PatrolDirection(PointId());
+			}
+		}
 
         transform.position += transform.forward * (moveSpeed * Time.deltaTime);
     }
@@ -63,24 +68,27 @@ public class EnemyControl : MonoBehaviour{
         return pid;
     }
 
-	/*
-    void DetectionCheck(){
-		if (Physics.Raycast(transform.position, player.position, out hit, detectDistance)) {
-			Debug.DrawRay(transform.position, player.position * detectDistance, Color.red);
+	//detect if the player is sight
+    bool DetectionCheck(){
+		Vector3 rayDir = player.position - transform.position;
 
-			if (hit.transform.tag == "Player") {
-				float angle = Vector3.Angle(transform.forward, player.position);
+		if (Physics.Raycast(transform.position, rayDir.normalized, out hit, detectDistance)) {
+			Debug.DrawRay(transform.position, rayDir.normalized * detectDistance, Color.red);
+
+			if(hit.transform.tag == "Player") {
+				float angle = Mathf.Abs(Vector3.Angle(transform.forward, player.position - transform.position));				
 				if (angle < detectAngle) {
-					print("I can see you");
+					return true;
 				} else {
-					print("where are you?");
+					return false;
 				}
+			} else {
+				return false;
 			}
 		} else {
-			Debug.DrawRay(transform.position, player.position * detectDistance, Color.white);
-			//Debug.DrawRay(transform.position, transform.forward * detectDistance, Color.white);
+			Debug.DrawRay(transform.position, rayDir.normalized * detectDistance, Color.white);
+			return false;
 		}
 
     }
-	*/
 }
