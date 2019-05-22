@@ -13,34 +13,28 @@ public class EnemyControl : MonoBehaviour{
     [Header("PlayerDetection")]
     public float detectDistance = 5;
     public float detectAngle = 45;
-    private RaycastHit hit;
-	private Transform player;
+    protected RaycastHit hit;
+	protected Transform player;
 
     void Awake(){
         MovePoints();
 		player = GameObject.FindGameObjectWithTag("Player").transform.root;
 	}
 
-    void Update(){
-        if (movePoints != null){
-            Movement();
-        }
-    }
-
     //moves the enemy forwards to given location point
-    void Movement(){
-        print(DetectionCheck());
+    protected void Movement(){
+		if(movePoints != null) {
+			//if player is detected, go after the player else return to path
+			if(DetectionCheck()) {
 
-		//if player is detected, go after the player else return to path
-		if(DetectionCheck()) {
-
-		} else {
-			if(Vector3.Distance(transform.position, curPoint.position) <= 2) {
-				PatrolDirection(PointId());
+			} else {
+				if(Vector3.Distance(transform.position, curPoint.position) <= 2) {
+					PatrolDirection(PointId());
+				}
 			}
-		}
 
-        transform.position += transform.forward * (moveSpeed * Time.deltaTime);
+			transform.position += transform.forward * (moveSpeed * Time.deltaTime);
+		}
     }
     
     //get all patrol points and put them in a list for easy access
@@ -69,26 +63,31 @@ public class EnemyControl : MonoBehaviour{
     }
 
 	//detect if the player is sight
-    bool DetectionCheck(){
+	protected bool DetectionCheck(){
 		Vector3 rayDir = player.position - transform.position;
 
-		if (Physics.Raycast(transform.position, rayDir.normalized, out hit, detectDistance)) {
-			Debug.DrawRay(transform.position, rayDir.normalized * detectDistance, Color.red);
-
+		Debug.DrawRay(transform.position, rayDir.normalized * detectDistance, Color.red);
+		if(Physics.Raycast(transform.position, rayDir.normalized, out hit, detectDistance)) {
 			if(hit.transform.tag == "Player") {
-				float angle = Mathf.Abs(Vector3.Angle(transform.forward, player.position - transform.position));				
-				if (angle < detectAngle) {
+				float angle = Mathf.Abs(Vector3.Angle(transform.forward, player.position - transform.position));
+				if(angle < detectAngle) {
 					return true;
-				} else {
-					return false;
 				}
-			} else {
-				return false;
 			}
-		} else {
-			Debug.DrawRay(transform.position, rayDir.normalized * detectDistance, Color.white);
-			return false;
 		}
 
-    }
+		return false;
+	}
+
+	protected virtual void Attack() {
+		if(!DetectionCheck()) {
+			print(this.name + ": No player detected");
+			transform.LookAt(curPoint);
+			Time.timeScale = 1f;
+			return;
+		}
+		Time.timeScale = 0.3f;
+		transform.LookAt(player);
+		print(this.name + ": Player found");
+	}
 }
