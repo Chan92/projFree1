@@ -17,7 +17,7 @@ public class CharacterControl : MonoBehaviour{
 
 	[Header("Raycast checks")]
 	public Vector3 moveCheckOffset;
-	public float moveCheckDis = 2;
+	public float moveCheckDis = 0.8f;
 	private RaycastHit moveHit;
 	private int wallLayer;
 	private int fwallLayer;

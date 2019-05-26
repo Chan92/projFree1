@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RobotRanged : EnemyControl{
-
-	void Start(){
-        
-    }
-
     void Update(){
 		Movement();
-		Attack();
+		Offense();
 	}
 
-	protected override void Attack() {
-		//print("RangeRobo_:Test?");
+	//attacks the player
+	protected override IEnumerator Attack() {
+		yield return new WaitForSeconds(0);
 		base.Attack();
-		//print("RangeRobo_: Attack player");
+		//yield return new WaitForSeconds(hitDelay);
+		//offenseCoroutine = null;
 	}
 }

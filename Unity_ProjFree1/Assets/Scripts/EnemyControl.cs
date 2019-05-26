@@ -3,20 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyControl : MonoBehaviour{
-    [Header("Movement")]
+	[Header("Movement")]
+	public bool circularMovement;
     public Transform movePointList;
     public float moveSpeed = 10;
     private List<Transform> movePoints = new List<Transform>();
     private Transform curPoint;
     private int pid = 0;
-
-    [Header("PlayerDetection")]
+	private bool idUp = true;
+	private bool moveForwards = true;
+	
+	[Header("PlayerDetection")]
     public float detectDistance = 5;
     public float detectAngle = 45;
     protected RaycastHit hit;
 	protected Transform player;
 
-    void Awake(){
+	[Header("Offense")]
+	public float hitRange;
+	public float hitDamage = 10;
+	public float hitDelay = 3;
+	protected Coroutine offenseCoroutine;
+
+	[Header("Effects")]
+	public Animator anim;
+	public AudioSource soundObj;
+	public AudioClip alertSound;
+	public AudioClip attackSound;
+	public AudioClip deathSound;
+
+	void Awake(){
         MovePoints();
 		player = GameObject.FindGameObjectWithTag("Player").transform.root;
 	}
@@ -29,11 +45,17 @@ public class EnemyControl : MonoBehaviour{
 
 			} else {
 				if(Vector3.Distance(transform.position, curPoint.position) <= 2) {
-					PatrolDirection(PointId());
+					if (circularMovement) {
+						PatrolDirection(PointIdCirular());
+					} else {
+						PatrolDirection(PointIdLinar());
+					}
 				}
 			}
 
-			transform.position += transform.forward * (moveSpeed * Time.deltaTime);
+			if (moveForwards) {
+				transform.position += transform.forward * (moveSpeed * Time.deltaTime);
+			}
 		}
     }
     
@@ -51,8 +73,8 @@ public class EnemyControl : MonoBehaviour{
         transform.LookAt(curPoint);
     }
 
-    //update the point id
-    int PointId() {
+    //update the point id up and back to 0, for a cirular movement
+    int PointIdCirular() {
         pid++;
         
         if (pid >= movePoints.Count){
@@ -62,6 +84,29 @@ public class EnemyControl : MonoBehaviour{
         return pid;
     }
 
+	//update the point id up and down, for a linar movement
+	int PointIdLinar() {
+		if (idUp) {
+			pid++;
+
+			if (pid >= movePoints.Count) {
+				idUp = false;
+				pid--;
+			}
+
+			return pid;
+		} else {
+			pid--;
+
+			if (pid < 0) {
+				idUp = true;
+				pid++;
+			}
+
+			return pid;
+		}
+	}
+
 	//detect if the player is sight
 	protected bool DetectionCheck(){
 		Vector3 rayDir = player.position - transform.position;
@@ -70,24 +115,44 @@ public class EnemyControl : MonoBehaviour{
 		if(Physics.Raycast(transform.position, rayDir.normalized, out hit, detectDistance)) {
 			if(hit.transform.tag == "Player") {
 				float angle = Mathf.Abs(Vector3.Angle(transform.forward, player.position - transform.position));
-				if(angle < detectAngle) {
+				if(angle < detectAngle) {					
+					transform.LookAt(player);
 					return true;
 				}
 			}
 		}
 
+		transform.LookAt(curPoint);
 		return false;
 	}
 
-	protected virtual void Attack() {
-		if(!DetectionCheck()) {
-			print(this.name + ": No player detected");
-			transform.LookAt(curPoint);
-			Time.timeScale = 1f;
-			return;
+	//Basic attack
+	protected virtual IEnumerator Attack() {
+		yield return new WaitForSeconds(0);
+		print(this.name + "_ attack");
+		yield return new WaitForSeconds(hitDelay);
+		print(this.name + "_ wait finish");
+		offenseCoroutine = null;
+	}
+
+	//attack the player when the player is within hit range
+	protected void Offense() {
+		if (DetectionCheck()) {
+			if (Vector3.Distance(transform.position, player.position) <= hitRange) {
+				moveForwards = false;
+				if (offenseCoroutine == null) {
+					offenseCoroutine = StartCoroutine(Attack());
+				}
+			} else {
+				if (offenseCoroutine == null) {
+					moveForwards = true;
+					DetectionCheck();
+				}
+			}
+		} else {
+			if (offenseCoroutine == null) {
+				moveForwards = true;
+			}
 		}
-		Time.timeScale = 0.3f;
-		transform.LookAt(player);
-		print(this.name + ": Player found");
 	}
 }
