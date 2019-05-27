@@ -3080,11 +3080,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy2_range
       objectReference: {fileID: 0}
-    - target: {fileID: 1636464680428294921, guid: c81259707dab92345b3a1c5679f69ba7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1636464680428295029, guid: c81259707dab92345b3a1c5679f69ba7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3219,11 +3214,6 @@ PrefabInstance:
       propertyPath: movePointList
       value: 
       objectReference: {fileID: 1084312551}
-    - target: {fileID: 2868227786027707437, guid: 2c927c966236a4944a8c145ae68cc0f0,
-        type: 3}
-      propertyPath: hitRange
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c927c966236a4944a8c145ae68cc0f0, type: 3}
 --- !u!1001 &8157935911685233630

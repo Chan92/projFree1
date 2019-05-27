@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FloorBehaivor : MonoBehaviour{
-	public bool setTrans = true;
+	public bool setTrans = false;
 	public Material normalMat;
 	public Material transMat;
 
