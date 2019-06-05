@@ -3815,6 +3815,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Factory_BlockOut
       objectReference: {fileID: 0}
+    - target: {fileID: 6882788272450925145, guid: 77c97a501da29b84f84bc8746c65bc56,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559691850797170811, guid: 77c97a501da29b84f84bc8746c65bc56,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559691850797170811, guid: 77c97a501da29b84f84bc8746c65bc56,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7974405373816766686, guid: 77c97a501da29b84f84bc8746c65bc56,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3965,11 +3980,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 6882788272450925145, guid: 77c97a501da29b84f84bc8746c65bc56,
-        type: 3}
-      propertyPath: m_TagString
-      value: Plank
-      objectReference: {fileID: 0}
     - target: {fileID: 5941186859055318019, guid: 77c97a501da29b84f84bc8746c65bc56,
         type: 3}
       propertyPath: m_Layer
@@ -4033,16 +4043,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3559691850797170811, guid: 77c97a501da29b84f84bc8746c65bc56,
-        type: 3}
-      propertyPath: m_TagString
-      value: Plank
-      objectReference: {fileID: 0}
-    - target: {fileID: 3559691850797170811, guid: 77c97a501da29b84f84bc8746c65bc56,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8662435733632888778, guid: 77c97a501da29b84f84bc8746c65bc56,
         type: 3}

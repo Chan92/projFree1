@@ -36,8 +36,8 @@ public class CharacterControl : MonoBehaviour{
 
 	//moves the character and rotates it to the move direction, the camera moves with the player
 	protected void Walk() {
-		float hor = Input.GetAxis("Horizontal");
-		float ver = Input.GetAxis("Vertical");
+		float hor = Input.GetAxisRaw("Horizontal");
+		float ver = Input.GetAxisRaw("Vertical");
 
 		Vector3 dirMove = new Vector3(hor, 0, ver);
 		Vector3 dirRot = new Vector3(-ver, 0, hor);

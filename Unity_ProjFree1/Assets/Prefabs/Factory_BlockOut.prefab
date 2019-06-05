@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &480523028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 480523029}
+  - component: {fileID: 480523030}
+  m_Layer: 0
+  m_Name: PlankSpot
+  m_TagString: PlankSpot
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &480523029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480523028}
+  m_LocalRotation: {x: -0.055037253, y: 0, z: 0, w: 0.9984844}
+  m_LocalPosition: {x: 9.67, y: 6.34, z: -2.29}
+  m_LocalScale: {x: 2, y: 1, z: 6}
+  m_Children: []
+  m_Father: {fileID: 3157150475294598561}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: -6.31, y: 0, z: 0}
+--- !u!65 &480523030
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480523028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 3, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &23776093436147590
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +55,7 @@ GameObject:
   - component: {fileID: 242598380478637917}
   - component: {fileID: 5508884583886187407}
   - component: {fileID: 4395833250197524719}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +101,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -136,7 +180,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -170,7 +214,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &1857878420
 BoxCollider:
@@ -196,7 +240,7 @@ GameObject:
   - component: {fileID: 7713433728114103556}
   - component: {fileID: 4544355744466642831}
   - component: {fileID: 3677520912241307520}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Outside_Pillar06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +286,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -519,7 +563,7 @@ GameObject:
   - component: {fileID: 5781747600623433409}
   - component: {fileID: 4781726026404511117}
   - component: {fileID: 7004707401729801761}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Outside_Pillar04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +609,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -596,7 +640,7 @@ GameObject:
   - component: {fileID: 4262067100838025959}
   - component: {fileID: 2051060090433147878}
   - component: {fileID: 4163370461216507497}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Outside_Pillar01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +686,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -673,7 +717,7 @@ GameObject:
   - component: {fileID: 4675203975229078276}
   - component: {fileID: 583936307050932754}
   - component: {fileID: 1511101709718087169}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,7 +763,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -750,7 +794,7 @@ GameObject:
   - component: {fileID: 2363494487851974741}
   - component: {fileID: 5861547814340267209}
   - component: {fileID: 6337254199217891069}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Outside_Enemypath4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -796,7 +840,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 549bd58907e2f0b47b9815607f6ff923, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -952,7 +996,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -986,7 +1030,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &1963954615
 BoxCollider:
@@ -1209,7 +1253,7 @@ GameObject:
   - component: {fileID: 5981618658851491720}
   - component: {fileID: 2736622115905604814}
   - component: {fileID: 4324763835976455310}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1255,7 +1299,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1517,7 +1561,7 @@ GameObject:
   - component: {fileID: 4172553932259806700}
   - component: {fileID: 7637005169238993079}
   - component: {fileID: 7572460336876937244}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1563,7 +1607,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1640,7 +1684,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 537c207f5566368488d709ea6fb7d70a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1748,7 +1792,7 @@ GameObject:
   - component: {fileID: 1064720748770151948}
   - component: {fileID: 1452157450670902652}
   - component: {fileID: 5373015202364266224}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1794,7 +1838,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1825,7 +1869,7 @@ GameObject:
   - component: {fileID: 2775125954716952542}
   - component: {fileID: 5219040513088975213}
   - component: {fileID: 10668916775948005}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Inside_EnemyPath_Flying02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1902,7 +1946,7 @@ GameObject:
   - component: {fileID: 8955219627157573055}
   - component: {fileID: 8644227312361753784}
   - component: {fileID: 1788413129858014736}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1948,7 +1992,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2179,7 +2223,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2210,7 +2254,7 @@ GameObject:
   - component: {fileID: 6265658834361921438}
   - component: {fileID: 2273999839363797133}
   - component: {fileID: 5211544330637739731}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2256,7 +2300,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2335,7 +2379,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2369,7 +2413,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &361312487
 BoxCollider:
@@ -2549,7 +2593,7 @@ GameObject:
   - component: {fileID: 325727942681661634}
   - component: {fileID: 49384228607760998}
   - component: {fileID: 7348186335785908101}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Inside_EnemyPath04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2626,7 +2670,7 @@ GameObject:
   - component: {fileID: 4605172170337120057}
   - component: {fileID: 3556058608167870328}
   - component: {fileID: 3008476892301048877}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Inside_EnemyPath_Flying03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2703,7 +2747,7 @@ GameObject:
   - component: {fileID: 3168320233996550606}
   - component: {fileID: 4316858916063070638}
   - component: {fileID: 4875426863011367522}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2749,7 +2793,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3011,7 +3055,7 @@ GameObject:
   - component: {fileID: 208297826845825049}
   - component: {fileID: 5486674288164961354}
   - component: {fileID: 5175835293471952126}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3057,7 +3101,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3165,7 +3209,7 @@ GameObject:
   - component: {fileID: 7412464628367481957}
   - component: {fileID: 6325227645152974292}
   - component: {fileID: 7627582874984104821}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3211,7 +3255,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3319,7 +3363,7 @@ GameObject:
   - component: {fileID: 7545496515263384707}
   - component: {fileID: 7920552591963665065}
   - component: {fileID: 9079262468603603170}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3365,7 +3409,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3519,7 +3563,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 537c207f5566368488d709ea6fb7d70a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3627,7 +3671,7 @@ GameObject:
   - component: {fileID: 7862636153733080257}
   - component: {fileID: 3381968594559496645}
   - component: {fileID: 7341936562475072284}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3673,7 +3717,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3858,6 +3902,7 @@ Transform:
   - {fileID: 2775125954716952542}
   - {fileID: 4605172170337120057}
   - {fileID: 3157150475963142177}
+  - {fileID: 480523029}
   m_Father: {fileID: 7974405373816766686}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3882,7 +3927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3157150475866883128}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pillars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4060,12 +4105,12 @@ GameObject:
   - component: {fileID: 3157150475925092316}
   - component: {fileID: 1858424574}
   m_Layer: 0
-  m_Name: Outsides
+  m_Name: Roofs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3157150475925092316
 Transform:
   m_ObjectHideFlags: 0
@@ -4292,7 +4337,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4323,7 +4368,7 @@ GameObject:
   - component: {fileID: 2529250000723603674}
   - component: {fileID: 5340236748286071281}
   - component: {fileID: 3428030433345766497}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Outside_Pillar02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4369,7 +4414,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4525,7 +4570,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4559,7 +4604,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &1443186413
 BoxCollider:
@@ -4893,7 +4938,7 @@ GameObject:
   - component: {fileID: 4468354417478949134}
   - component: {fileID: 6361299737706600115}
   - component: {fileID: 152718669445110571}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4939,7 +4984,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5124,12 +5169,14 @@ GameObject:
   - component: {fileID: 8129350436918181649}
   - component: {fileID: 6967850319002152426}
   - component: {fileID: 161050205625667052}
+  - component: {fileID: 584934581}
+  - component: {fileID: 584934583}
   m_Layer: 0
   m_Name: Plank_Small
-  m_TagString: Untagged
+  m_TagString: Plank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8129350436918181649
 Transform:
@@ -5170,7 +5217,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5190,6 +5237,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &584934581
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3559691850797170811}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.942056, y: 0.89327127, z: 0.37784827}
+  m_Center: {x: 0, y: 0, z: 0.18892413}
+--- !u!135 &584934583
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3559691850797170811}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3744835508333479614
 GameObject:
   m_ObjectHideFlags: 0
@@ -5586,7 +5659,7 @@ GameObject:
   - component: {fileID: 2255389459477105846}
   - component: {fileID: 7853740189893164410}
   - component: {fileID: 9181645450714057703}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5632,7 +5705,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5663,7 +5736,7 @@ GameObject:
   - component: {fileID: 6315092330784774985}
   - component: {fileID: 849204368277237160}
   - component: {fileID: 3701682019931327873}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5709,7 +5782,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5740,7 +5813,7 @@ GameObject:
   - component: {fileID: 3715439200496274153}
   - component: {fileID: 8568009065875085537}
   - component: {fileID: 5712105238312988372}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Outside_Enemypath2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5786,7 +5859,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 549bd58907e2f0b47b9815607f6ff923, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5817,7 +5890,7 @@ GameObject:
   - component: {fileID: 2287936647935763173}
   - component: {fileID: 4857162063803837569}
   - component: {fileID: 8802716435068046884}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Inside_EnemyPath01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5894,7 +5967,7 @@ GameObject:
   - component: {fileID: 6068802699521170027}
   - component: {fileID: 9096010065996971610}
   - component: {fileID: 7521852072943449636}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Outside_Pillar09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5940,7 +6013,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6019,7 +6092,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6053,7 +6126,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &301514153
 BoxCollider:
@@ -6310,7 +6383,7 @@ GameObject:
   - component: {fileID: 8382646330864403042}
   - component: {fileID: 8075627819212639196}
   - component: {fileID: 7368570737281418661}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Outside_Pillar03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6356,7 +6429,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6435,7 +6508,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6469,7 +6542,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &2135211224
 BoxCollider:
@@ -6711,7 +6784,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6745,7 +6818,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &912422986
 BoxCollider:
@@ -6908,7 +6981,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6112279665051257124, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 537c207f5566368488d709ea6fb7d70a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6939,7 +7012,7 @@ GameObject:
   - component: {fileID: 1837121203334702230}
   - component: {fileID: 126076663509360321}
   - component: {fileID: 64050524049129846}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Inside_EnemyPath_Flying01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7107,7 +7180,7 @@ GameObject:
   - component: {fileID: 6415135873397282735}
   - component: {fileID: 1291655243285341468}
   - component: {fileID: 8919755374980000365}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Outside_Enemypath1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7153,7 +7226,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 549bd58907e2f0b47b9815607f6ff923, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7309,7 +7382,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7343,7 +7416,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &2087779321
 BoxCollider:
@@ -7369,7 +7442,7 @@ GameObject:
   - component: {fileID: 7033957649346884598}
   - component: {fileID: 4071191220211341982}
   - component: {fileID: 1078246291586079011}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Outside_Pillar05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7415,7 +7488,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7446,7 +7519,7 @@ GameObject:
   - component: {fileID: 1296175602696861140}
   - component: {fileID: 7228318801987164619}
   - component: {fileID: 70188373583946116}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Outside_Enemypath5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7492,7 +7565,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 549bd58907e2f0b47b9815607f6ff923, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7676,7 +7749,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7710,7 +7783,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &1351388212
 BoxCollider:
@@ -7813,7 +7886,7 @@ GameObject:
   - component: {fileID: 6859910730150941137}
   - component: {fileID: 5636618633677861365}
   - component: {fileID: 3286980032634312527}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Inside_EnemyPath03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7890,7 +7963,7 @@ GameObject:
   - component: {fileID: 268415710920594664}
   - component: {fileID: 2666666759738541403}
   - component: {fileID: 1143918113965264380}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Outside_Pillar07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7936,7 +8009,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8013,7 +8086,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 537c207f5566368488d709ea6fb7d70a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8090,7 +8163,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 68fa6f57c35038742bc65956fcaf9bd8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8198,7 +8271,7 @@ GameObject:
   - component: {fileID: 1349403866660832001}
   - component: {fileID: 2916518991515297492}
   - component: {fileID: 6840247321109316127}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8244,7 +8317,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8309,7 +8382,7 @@ GameObject:
   - component: {fileID: 1910889103440087968}
   - component: {fileID: 8239942188739089863}
   - component: {fileID: 4420949394847788287}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8355,7 +8428,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8477,7 +8550,7 @@ GameObject:
   - component: {fileID: 7259306005622849381}
   - component: {fileID: 7728021258112030688}
   - component: {fileID: 7281723385403212140}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Outside_Enemypath6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8523,7 +8596,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 549bd58907e2f0b47b9815607f6ff923, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8554,9 +8627,11 @@ GameObject:
   - component: {fileID: 712384324939492918}
   - component: {fileID: 2944102777871372575}
   - component: {fileID: 6168893522063575936}
+  - component: {fileID: 64814112}
+  - component: {fileID: 64814114}
   m_Layer: 0
   m_Name: Plank_Large
-  m_TagString: Untagged
+  m_TagString: Plank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8600,7 +8675,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8620,6 +8695,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &64814112
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6882788272450925145}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.942057, y: 0.89327127, z: 0.37784818}
+  m_Center: {x: 0, y: 0, z: 0.18892409}
+--- !u!135 &64814114
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6882788272450925145}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 7.73
+  m_Center: {x: 0, y: 0, z: 0.18892409}
 --- !u!1 &6978153337924167784
 GameObject:
   m_ObjectHideFlags: 0
@@ -8679,7 +8780,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8713,7 +8814,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &249766726
 BoxCollider:
@@ -8864,7 +8965,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8898,7 +8999,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &1740596582
 BoxCollider:
@@ -9049,7 +9150,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9083,7 +9184,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &171209729
 BoxCollider:
@@ -9157,7 +9258,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9191,7 +9292,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &1299394818
 BoxCollider:
@@ -9217,7 +9318,7 @@ GameObject:
   - component: {fileID: 7820835613911124333}
   - component: {fileID: 2354637373968689623}
   - component: {fileID: 805304342306748854}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Outside_Pillar08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9263,7 +9364,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9294,7 +9395,7 @@ GameObject:
   - component: {fileID: 2474076814224211226}
   - component: {fileID: 1199203484790083725}
   - component: {fileID: 895379827678613811}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9340,7 +9441,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9417,7 +9518,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 0863639144cdf7347b96f5d9a31fb6c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9525,7 +9626,7 @@ GameObject:
   - component: {fileID: 3694531393462592713}
   - component: {fileID: 1920255385966753491}
   - component: {fileID: 2873322131630602698}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9571,7 +9672,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9648,7 +9749,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9756,7 +9857,7 @@ GameObject:
   - component: {fileID: 8864569388945302066}
   - component: {fileID: 7972629095682680119}
   - component: {fileID: 7680027078915178754}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9802,7 +9903,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9833,7 +9934,7 @@ GameObject:
   - component: {fileID: 4944906244772177209}
   - component: {fileID: 3311962347082291997}
   - component: {fileID: 750316607626052716}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Outside_Enemypath3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9879,7 +9980,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 549bd58907e2f0b47b9815607f6ff923, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9958,7 +10059,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9992,7 +10093,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &1174189771
 BoxCollider:
@@ -10172,7 +10273,7 @@ GameObject:
   - component: {fileID: 945756276434142909}
   - component: {fileID: 1274646466849953472}
   - component: {fileID: 3009600818587817432}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10218,7 +10319,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10326,7 +10427,7 @@ GameObject:
   - component: {fileID: 4903228282326710492}
   - component: {fileID: 2006760083767848449}
   - component: {fileID: 7177985772106602905}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10372,7 +10473,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10403,7 +10504,7 @@ GameObject:
   - component: {fileID: 9038935886955528250}
   - component: {fileID: 9160423080284548836}
   - component: {fileID: 1292907841720277495}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10449,7 +10550,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10726,7 +10827,7 @@ GameObject:
   - component: {fileID: 3635157998481181876}
   - component: {fileID: 7435056044396325788}
   - component: {fileID: 409529907643461633}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10772,7 +10873,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10851,7 +10952,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 2769c54326dcd034c8b1254f454479e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10885,7 +10986,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &1820079696
 BoxCollider:
@@ -11171,7 +11272,7 @@ GameObject:
   - component: {fileID: 8576935367389448949}
   - component: {fileID: 5448427927792880894}
   - component: {fileID: 1923779206999011207}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Inside_EnemyPath02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11340,7 +11441,7 @@ GameObject:
   - component: {fileID: 3327183804167918961}
   - component: {fileID: 1741512994243689182}
   - component: {fileID: 437076348641605772}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11386,7 +11487,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11463,7 +11564,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6112279665051257124, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 68fa6f57c35038742bc65956fcaf9bd8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11494,7 +11595,7 @@ GameObject:
   - component: {fileID: 6937985598685464889}
   - component: {fileID: 8777240305176631351}
   - component: {fileID: 6953676736333195849}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Inside_Pillar09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11540,7 +11641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11617,7 +11718,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 9e8d342ba16d88c4b9d06ea4f5274939, type: 3}
+  - {fileID: 2100000, guid: 230c22a1fea050e4cad993f7e7a3111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

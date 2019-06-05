@@ -13,6 +13,7 @@ public class FloorLayers : MonoBehaviour{
 		FindChildren();
 	}
 
+	//makes the enviorment above the player invisible only when the player is below it
 	void EnableSwap(Transform child) {
 		if(player.localPosition.y < child.localPosition.y) {
 			child.GetComponent<MeshRenderer>().enabled = false;
@@ -21,11 +22,12 @@ public class FloorLayers : MonoBehaviour{
 		}
 	}
 
+	//search for the parts to swap invisibility
 	void FindChildren() {
 		foreach(Transform child in transform) {
 			if(child.GetComponent<MeshRenderer>() != null) {
 				EnableSwap(child);
-			} else {
+			} else if(child.childCount > 0 && child.GetChild(0).GetComponent<MeshRenderer>() != null) {
 				EnableSwap(child.GetChild(0));
 			}
 		}

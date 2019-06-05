@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1674848113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1674848114}
+  m_Layer: 8
+  m_Name: HoldingSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1674848114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674848113}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.35, y: 1.0999999, z: -1.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8157935912857143762}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1749085562
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +289,8 @@ GameObject:
   - component: {fileID: 8157935912607816885}
   - component: {fileID: 8157935912607816884}
   - component: {fileID: 8157935912607816882}
+  - component: {fileID: 358469313}
+  - component: {fileID: 358469314}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -297,7 +329,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &8157935912607816882
 CapsuleCollider:
@@ -313,6 +345,40 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &358469313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157935912607816887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a669f1cc076e9924e9957b1ec8c9492a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  invulnerableTime: 1
+  hpbar: {fileID: 0}
+  anim: {fileID: 0}
+  soundObj: {fileID: 0}
+  dmgSound: {fileID: 0}
+  dmgEffect: {fileID: 0}
+--- !u!114 &358469314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157935912607816887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71698aeb03130c459fb77a5b3ab24a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdingSpot: {fileID: 1674848114}
+  pickupKey: 113
+  openDoorKey: 101
 --- !u!1 &8157935912857143766
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +411,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1749085563}
+  - {fileID: 1674848114}
   m_Father: {fileID: 8157935912607816885}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -428,4 +495,4 @@ MonoBehaviour:
   rotateSpeed: 0.2
   animations: {fileID: 0}
   moveCheckOffset: {x: 0, y: 0, z: 0}
-  moveCheckDis: 2
+  moveCheckDis: 0.8
