@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class RobotRanged : EnemyControl{
     void Update(){
-		Movement();
-		Offense();
+		if(!death) {
+			Movement();
+			Offense();
+		}
 	}
 
 	//attacks the player
@@ -14,5 +16,12 @@ public class RobotRanged : EnemyControl{
 		base.Attack();
 		//yield return new WaitForSeconds(hitDelay);
 		//offenseCoroutine = null;
+	}
+
+	//check if a box is thrown on the enemy
+	private void OnCollisionEnter(Collision collision) {
+		if (collision.transform.tag == "Box") {
+			Death();
+		}
 	}
 }

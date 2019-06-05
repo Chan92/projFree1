@@ -12,6 +12,7 @@ public class EnemyControl : MonoBehaviour{
     private int pid = 0;
 	private bool idUp = true;
 	private bool moveForwards = true;
+	protected bool death = false;
 	
 	[Header("PlayerDetection")]
     public float detectDistance = 5;
@@ -35,6 +36,11 @@ public class EnemyControl : MonoBehaviour{
 	void Awake(){
         MovePoints();
 		player = GameObject.FindGameObjectWithTag("Player").transform.root;
+	}
+
+	//called when an enemy dies
+	protected void Death() {
+		print("Enemy died");
 	}
 
     //moves the enemy forwards to given location point
@@ -70,7 +76,9 @@ public class EnemyControl : MonoBehaviour{
     //get a direction point the enemy has to move to
     void PatrolDirection(int id){
         curPoint = movePoints[id];
-        transform.LookAt(curPoint);
+		Vector3 lookdir = curPoint.position;
+		lookdir.y = transform.position.y;
+        transform.LookAt(lookdir);
     }
 
     //update the point id up and back to 0, for a cirular movement
@@ -116,13 +124,17 @@ public class EnemyControl : MonoBehaviour{
 			if(hit.transform.tag == "Player") {
 				float angle = Mathf.Abs(Vector3.Angle(transform.forward, player.position - transform.position));
 				if(angle < detectAngle) {					
-					transform.LookAt(player);
+					Vector3 playerdir = player.position;
+					playerdir.y = transform.position.y;
+					transform.LookAt(playerdir);
 					return true;
 				}
 			}
 		}
 
-		transform.LookAt(curPoint);
+		Vector3 lookdir = curPoint.position;
+		lookdir.y = transform.position.y;
+		transform.LookAt(lookdir);
 		return false;
 	}
 

@@ -6,6 +6,8 @@ public class CharacterSkills : MonoBehaviour {
 	public Transform holdingSpot;
 	public KeyCode pickupKey;
 	public KeyCode openDoorKey;
+	private bool doorlock1 = false;
+	private bool doorlock2 = false;
 
 	private void OnTriggerStay(Collider other) {
 		//picksup the plank
@@ -25,14 +27,31 @@ public class CharacterSkills : MonoBehaviour {
 			}
 		}
 
-		//door interaction
-		if(Input.GetKeyDown(openDoorKey) && other.tag == "Door") {
-			DoorInteraction();
+		//pickup cardkey
+		if(Input.GetKeyDown(pickupKey) && other.tag == "Cardkey") {
+			doorlock1 = true;
+		}
+
+		//press button to open exit door
+		if(Input.GetKeyDown(openDoorKey) && other.tag == "Doorbutton") {
+			doorlock2 = true;
+		}
+
+		//door interaction 1
+		if(Input.GetKeyDown(openDoorKey) && other.tag == "Door1") {
+			DoorInteraction(doorlock1);
+		}
+
+		//door interaction 2
+		if(Input.GetKeyDown(openDoorKey) && other.tag == "Door2") {
+			DoorInteraction(doorlock2);
 		}
 	}
 
 	//checks if the door can be opened
-	void DoorInteraction() {
-		print("Open door");
+	void DoorInteraction(bool doorlock) {
+		if(doorlock) {
+			print("Open door");
+		}
 	}
 }
