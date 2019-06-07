@@ -13,6 +13,7 @@ public class EnemyControl : MonoBehaviour{
 	private bool idUp = true;
 	private bool moveForwards = true;
 	protected bool death = false;
+    private float minDistanceToPoint = 1.2f;
 	
 	[Header("PlayerDetection")]
     public float detectDistance = 5;
@@ -50,7 +51,7 @@ public class EnemyControl : MonoBehaviour{
 			if(DetectionCheck()) {
 
 			} else {
-				if(Vector3.Distance(transform.position, curPoint.position) <= 2) {
+				if(Vector3.Distance(transform.position, curPoint.position) <= minDistanceToPoint) {
 					if (circularMovement) {
 						PatrolDirection(PointIdCirular());
 					} else {
@@ -83,13 +84,8 @@ public class EnemyControl : MonoBehaviour{
 
     //update the point id up and back to 0, for a cirular movement
     int PointIdCirular() {
-        pid++;
-        
-        if (pid >= movePoints.Count){
-            pid = 0;
-        }
-        
-        return pid;
+        pid = (pid + 1) % movePoints.Count;
+        return (pid);
     }
 
 	//update the point id up and down, for a linar movement
