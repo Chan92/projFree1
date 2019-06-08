@@ -28,30 +28,38 @@ public class CharacterSkills : MonoBehaviour {
 		}
 
 		//pickup cardkey
-		if(Input.GetKeyDown(pickupKey) && other.tag == "Cardkey") {
+		if(Input.GetKeyDown(pickupKey) && other.tag == "Key") {
 			doorlock1 = true;
+			Destroy(other.transform.GetComponent<MeshRenderer>());
 		}
 
 		//press button to open exit door
-		if(Input.GetKeyDown(openDoorKey) && other.tag == "Doorbutton") {
+		if(Input.GetKeyDown(openDoorKey) && other.tag == "Button") {
 			doorlock2 = true;
 		}
 
-		//door interaction 1
-		if(Input.GetKeyDown(openDoorKey) && other.tag == "Door1") {
-			DoorInteraction(doorlock1);
+		//door interaction 1 (need cardkey)
+		if(Input.GetKeyDown(openDoorKey) && other.tag == "Door") {
+			DoorInteraction(doorlock1, other);
 		}
 
-		//door interaction 2
+		//door interaction 2 (need to enable door)
 		if(Input.GetKeyDown(openDoorKey) && other.tag == "Door2") {
-			DoorInteraction(doorlock2);
+			DoorInteraction(doorlock2, other);
 		}
 	}
 
 	//checks if the door can be opened
-	void DoorInteraction(bool doorlock) {
+	void DoorInteraction(bool doorlock, Collider door) {
 		if(doorlock) {
-			print("Open door");
+			door.transform.GetChild(0).GetComponent<BoxCollider>().enabled = false;
+		}
+	}
+
+	//closes the door 
+	private void OnTriggerExit(Collider other) {
+		if (other.tag == "Door" || other.tag == "Door2") {
+			other.transform.GetChild(0).GetComponent<BoxCollider>().enabled = true;
 		}
 	}
 }

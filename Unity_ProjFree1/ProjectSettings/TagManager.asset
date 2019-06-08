@@ -9,6 +9,7 @@ TagManager:
   - PlankSpot
   - Key
   - Button
+  - Door2
   layers:
   - Default
   - TransparentFX

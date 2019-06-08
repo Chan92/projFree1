@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FloorLayers : MonoBehaviour{
+	public float offset = 2f;
 	private Transform player;
 
 	void Start() {
@@ -15,7 +16,7 @@ public class FloorLayers : MonoBehaviour{
 
 	//makes the enviorment above the player invisible only when the player is below it
 	void EnableSwap(Transform child) {
-		if(player.localPosition.y < child.localPosition.y) {
+		if(player.localPosition.y < child.localPosition.y - offset) {
 			child.GetComponent<MeshRenderer>().enabled = false;
 		} else {
 			child.GetComponent<MeshRenderer>().enabled = true;

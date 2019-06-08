@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterControl : MonoBehaviour{
 	public bool showDebugging = false;
+	public bool startOnStart = true;
+	public Transform startPos;
 
 	[Header("Basic")]
 	public float moveSpeedSneak = 5f;
@@ -28,6 +30,10 @@ public class CharacterControl : MonoBehaviour{
 		fwallLayer = LayerMask.NameToLayer("Frontwall");
 		enemyLayer = LayerMask.NameToLayer("Enemy");
 		rootRB = transform.root.GetComponent<Rigidbody>();
+
+		if (startOnStart) {
+			transform.root.localPosition = startPos.localPosition;
+		}
 	}
 	
     void Update(){

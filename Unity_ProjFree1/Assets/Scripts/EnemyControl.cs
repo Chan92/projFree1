@@ -18,7 +18,8 @@ public class EnemyControl : MonoBehaviour{
 	[Header("PlayerDetection")]
     public float detectDistance = 5;
     public float detectAngle = 45;
-    protected RaycastHit hit;
+	public float invisibleOffset = 3;
+	protected RaycastHit hit;
 	protected Transform player;
 
 	[Header("Offense")]
@@ -33,6 +34,7 @@ public class EnemyControl : MonoBehaviour{
 	public AudioClip alertSound;
 	public AudioClip attackSound;
 	public AudioClip deathSound;
+
 
 	void Awake(){
         MovePoints();
@@ -162,5 +164,18 @@ public class EnemyControl : MonoBehaviour{
 				moveForwards = true;
 			}
 		}
+	}
+
+	//disables the enemy when its aboven the player 
+	protected bool Invisibility() {
+		if (player.localPosition.y < transform.localPosition.y - invisibleOffset) {
+			moveForwards = false;
+			transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+			return true;
+		}
+
+		transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
+		moveForwards = true;
+		return false;
 	}
 }

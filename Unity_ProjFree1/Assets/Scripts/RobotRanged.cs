@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RobotRanged : EnemyControl{
     void Update(){
-		if(!death) {
+		if(!death && !Invisibility()) {
 			Movement();
 			Offense();
 		}
@@ -13,9 +13,17 @@ public class RobotRanged : EnemyControl{
 	//attacks the player
 	protected override IEnumerator Attack() {
 		yield return new WaitForSeconds(0);
-		base.Attack();
-		//yield return new WaitForSeconds(hitDelay);
-		//offenseCoroutine = null;
+
+		if (soundObj && attackSound)
+			soundObj.PlayOneShot(attackSound);
+		if (anim)
+			anim.SetTrigger("Attack");
+
+		player.GetComponent<Health>().GetDmg(hitDamage);
+
+		print("attack");
+		yield return new WaitForSeconds(hitDelay);
+		offenseCoroutine = null;
 	}
 
 	//check if a box is thrown on the enemy
