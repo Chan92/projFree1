@@ -10,6 +10,7 @@ TagManager:
   - Key
   - Button
   - Door2
+  - Box
   layers:
   - Default
   - TransparentFX

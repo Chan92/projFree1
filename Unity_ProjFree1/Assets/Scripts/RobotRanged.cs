@@ -28,7 +28,7 @@ public class RobotRanged : EnemyControl{
 
 	//check if a box is thrown on the enemy
 	private void OnCollisionEnter(Collision collision) {
-		if (collision.transform.tag == "Box") {
+		if (collision.transform.tag == "Box" && !death) {
 			Death();
 		}
 	}

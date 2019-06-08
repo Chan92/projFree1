@@ -6,19 +6,22 @@ public class EnemyControl : MonoBehaviour{
 	[Header("Movement")]
 	public bool circularMovement;
     public Transform movePointList;
-    public float moveSpeed = 10;
+    public float moveSpeed = 5;
     private List<Transform> movePoints = new List<Transform>();
     private Transform curPoint;
     private int pid = 0;
 	private bool idUp = true;
 	private bool moveForwards = true;
-	protected bool death = false;
-    private float minDistanceToPoint = 1.2f;
+	private float minDistanceToPoint = 1.2f;
+	protected bool death = false;	
 	
 	[Header("PlayerDetection")]
     public float detectDistance = 5;
     public float detectAngle = 45;
 	public float invisibleOffset = 3;
+	public MeshRenderer cone;
+	public Material coneNormal;
+	public Material coneAlert;
 	protected RaycastHit hit;
 	protected Transform player;
 
@@ -43,7 +46,10 @@ public class EnemyControl : MonoBehaviour{
 
 	//called when an enemy dies
 	protected void Death() {
-		print("Enemy died");
+		death = true;
+		transform.localEulerAngles = new Vector3 (180, transform.localEulerAngles.y, transform.localEulerAngles.z);
+		if (soundObj && deathSound)
+			soundObj.PlayOneShot(deathSound);
 	}
 
     //moves the enemy forwards to given location point
@@ -125,6 +131,7 @@ public class EnemyControl : MonoBehaviour{
 					Vector3 playerdir = player.position;
 					playerdir.y = transform.position.y;
 					transform.LookAt(playerdir);
+					cone.material = coneAlert;
 					return true;
 				}
 			}
@@ -133,6 +140,7 @@ public class EnemyControl : MonoBehaviour{
 		Vector3 lookdir = curPoint.position;
 		lookdir.y = transform.position.y;
 		transform.LookAt(lookdir);
+		cone.material = coneNormal;
 		return false;
 	}
 
@@ -170,12 +178,21 @@ public class EnemyControl : MonoBehaviour{
 	protected bool Invisibility() {
 		if (player.localPosition.y < transform.localPosition.y - invisibleOffset) {
 			moveForwards = false;
-			transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+			SetRender(false);
 			return true;
 		}
 
-		transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
+		SetRender(true);
 		moveForwards = true;
 		return false;
+	}
+
+	//sets the render of each object in the enemy
+	void SetRender(bool enable) {
+		for (int i = 0; i < transform.childCount; i++) {
+			if (transform.GetChild(i).GetComponent<MeshRenderer>()) {
+				transform.GetChild(i).GetComponent<MeshRenderer>().enabled = enable;
+			}
+		}
 	}
 }
