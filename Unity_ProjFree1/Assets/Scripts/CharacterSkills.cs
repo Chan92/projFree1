@@ -59,7 +59,9 @@ public class CharacterSkills : MonoBehaviour {
 	//closes the door 
 	private void OnTriggerExit(Collider other) {
 		if (other.tag == "Door" || other.tag == "Door2") {
-			other.transform.GetChild(0).GetComponent<BoxCollider>().enabled = true;
+			if(other.transform.childCount >= 1 && other.transform.GetChild(0).GetComponent<BoxCollider>()) {
+				other.transform.GetChild(0).GetComponent<BoxCollider>().enabled = true;
+			}
 		}
 	}
 }

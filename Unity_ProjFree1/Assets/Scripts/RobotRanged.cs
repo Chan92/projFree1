@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RobotRanged : EnemyControl{
+	[Header("Attacks")]
+	public GameObject bullet;
+	public Transform bulletSpawn;
+
     void Update(){
 		if(!death && !Invisibility()) {
 			Movement();
@@ -12,17 +16,19 @@ public class RobotRanged : EnemyControl{
 
 	//attacks the player
 	protected override IEnumerator Attack() {
-		yield return new WaitForSeconds(0);
+		yield return new WaitForSeconds(hitDelay);
+
+		Transform newBullet = Instantiate(bullet, bulletSpawn.position, Quaternion.identity).transform;
+		newBullet.GetComponent<Bullet>().hitDmg = hitDamage;
+		//newBullet.GetComponent<Bullet>().direction = transform.eulerAngles;
+		
 
 		if (soundObj && attackSound)
 			soundObj.PlayOneShot(attackSound);
 		if (anim)
 			anim.SetTrigger("Attack");
 
-		player.GetComponent<Health>().GetDmg(hitDamage);
-
 		print("attack");
-		yield return new WaitForSeconds(hitDelay);
 		offenseCoroutine = null;
 	}
 
