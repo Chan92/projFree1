@@ -20,15 +20,12 @@ public class RobotRanged : EnemyControl{
 
 		Transform newBullet = Instantiate(bullet, bulletSpawn.position, Quaternion.identity).transform;
 		newBullet.GetComponent<Bullet>().hitDmg = hitDamage;
-		//newBullet.GetComponent<Bullet>().direction = transform.eulerAngles;
-		
 
 		if (soundObj && attackSound)
 			soundObj.PlayOneShot(attackSound);
 		if (anim)
 			anim.SetTrigger("Attack");
 
-		print("attack");
 		offenseCoroutine = null;
 	}
 

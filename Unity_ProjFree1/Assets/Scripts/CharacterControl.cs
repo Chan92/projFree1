@@ -32,12 +32,16 @@ public class CharacterControl : MonoBehaviour{
 		rootRB = transform.root.GetComponent<Rigidbody>();
 
 		if (startOnStart) {
-			transform.root.localPosition = startPos.localPosition;
+			PlayerToStart();
 		}
 	}
 	
     void Update(){
 		Walk();
+	}
+
+	public void PlayerToStart() {
+		transform.root.localPosition = startPos.localPosition;
 	}
 
 	//moves the character and rotates it to the move direction, the camera moves with the player

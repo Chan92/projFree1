@@ -137,6 +137,10 @@ public class EnemyControl : MonoBehaviour{
 			}
 		}
 
+		if(offenseCoroutine != null) {
+			StopCoroutine(offenseCoroutine);
+		}
+
 		Vector3 lookdir = curPoint.position;
 		lookdir.y = transform.position.y;
 		transform.LookAt(lookdir);

@@ -7,7 +7,9 @@ public class Health : MonoBehaviour{
 	[Header("Basic")]
 	public float maxHealth = 100;
 	private float curHealth;
-
+	[Space(10)]
+	public bool oneHitKill = true;
+	public float respawnDelay = 1f;
 	public float invulnerableTime = 1;
 	private bool invulnerable;
 
@@ -18,10 +20,15 @@ public class Health : MonoBehaviour{
 	public Animator anim;
 	public AudioSource soundObj;
 	public AudioClip dmgSound;
+	public AudioClip deathSound;
 	public ParticleSystem dmgEffect;
 
     void Start(){
-		Heal();
+		if(oneHitKill) {
+			hpbar.transform.parent.gameObject.SetActive(false);
+		} else {
+			Heal();
+		}
 	}
 
 	//gets the damage when getting hit
@@ -57,10 +64,21 @@ public class Health : MonoBehaviour{
 	}
 
 	//called upon death
-	void Death() {
+	public void Death() {
 		if (anim)
 			anim.SetBool("Dead", true);
-		print("ÿou are dead");
+		if (soundObj && deathSound)
+			soundObj.PlayOneShot(deathSound);
+		if(dmgEffect)
+			Instantiate(dmgEffect, transform.position, Quaternion.identity);
+
+		StartCoroutine(Respawn());
+	}
+
+	//respawns the char to the start
+	IEnumerator Respawn() {
+		yield return new WaitForSeconds(respawnDelay);
+		transform.GetComponentInChildren<CharacterControl>().PlayerToStart();
 	}
 
 	//gets the health info in the ui
