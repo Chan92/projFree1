@@ -12,6 +12,7 @@ public class CharacterSkills : MonoBehaviour {
 	public KeyCode openDoorKey;
 	public GameObject plankHint;
 	public GameObject plankPlaceHint;
+	public GameObject doorHint;
 	public GameObject keyCard;
 	private bool doorlock1 = false;
 	private bool doorlock2 = false;
@@ -20,6 +21,7 @@ public class CharacterSkills : MonoBehaviour {
 		keyCard.SetActive(false);
 		plankHint.SetActive(false);
 		plankPlaceHint.SetActive(false);
+		doorHint.SetActive(false);
 	}
 
 	private void OnTriggerStay(Collider other) {
@@ -27,10 +29,10 @@ public class CharacterSkills : MonoBehaviour {
 			//show hint how to pickup the plank
 			plankHint.SetActive(showHint);
 			if(plankHint)
-				plankHint.GetComponentInChildren<Text>().text = "Press '" + pickupKey + "' to pickup.";
+				plankHint.GetComponentInChildren<Text>().text = "Press '" + pickupKey + "' to pickup the plank.";
 
 			//picksup the plank
-			if(Input.GetKeyDown(pickupKey)) {
+			if(Input.GetKeyDown(pickupKey) && holdingSpot.childCount <= 0) {
 				plankHint.SetActive(false);
 				other.transform.parent = holdingSpot;
 				other.transform.localPosition = Vector3.zero;
@@ -42,7 +44,7 @@ public class CharacterSkills : MonoBehaviour {
 			//shows hint how to place the plank
 			plankPlaceHint.SetActive(showHint);
 			if(plankPlaceHint)
-				plankPlaceHint.GetComponentInChildren<Text>().text = "Press '" + pickupKey + "' to place.";
+				plankPlaceHint.GetComponentInChildren<Text>().text = "Press '" + pickupKey + "' to place the plank.";
 
 			//places the plank
 			if(Input.GetKeyDown(pickupKey)) {
@@ -62,7 +64,7 @@ public class CharacterSkills : MonoBehaviour {
 			if(autoPickup || (!autoPickup && Input.GetKeyDown(pickupKey))) {
 				keyCard.SetActive(true);
 				doorlock1 = true;
-				Destroy(other.transform.GetComponent<MeshRenderer>());
+				Destroy(other.gameObject);
 			}
 		}
 
@@ -73,6 +75,10 @@ public class CharacterSkills : MonoBehaviour {
 
 		//door interaction 1 (need cardkey)
 		if(other.tag == "Door") {
+			if(!doorlock1) {
+				doorHint.SetActive(true);
+			}
+
 			if(autoDoor || (!autoDoor && Input.GetKeyDown(openDoorKey))) {
 				DoorInteraction(doorlock1, other);
 			}
@@ -80,6 +86,10 @@ public class CharacterSkills : MonoBehaviour {
 
 		//door interaction 2 (need to enable door)
 		if(other.tag == "Door2") {
+			if(!doorlock2) {
+				doorHint.SetActive(true);
+			}
+
 			if(autoDoor || (!autoDoor && Input.GetKeyDown(openDoorKey))) {
 				DoorInteraction(doorlock2, other);
 			}
@@ -101,6 +111,10 @@ public class CharacterSkills : MonoBehaviour {
 
 		if(other.tag == "PlankSpot") {
 			plankPlaceHint.SetActive(false);
+		}
+
+		if(other.tag == "Door" || other.tag == "Door2") {
+			doorHint.SetActive(false);
 		}
 
 		if (other.tag == "Door" || other.tag == "Door2") {
