@@ -81,7 +81,7 @@ MonoBehaviour:
   circularMovement: 0
   movePointList: {fileID: 0}
   moveSpeed: 2.5
-  detectDistance: 5
+  detectDistance: 8
   detectAngle: 45
   invisibleOffset: 3
   cone: {fileID: 1418619645}
@@ -89,13 +89,13 @@ MonoBehaviour:
   coneAlert: {fileID: 2100000, guid: 9ca6441a66c032347843945f767db8c7, type: 2}
   hitRange: 5
   hitDamage: 10
-  hitDelay: 3
+  hitDelay: 0.5
   anim: {fileID: 0}
   soundObj: {fileID: 0}
   alertSound: {fileID: 0}
   attackSound: {fileID: 0}
   deathSound: {fileID: 0}
-  bullet: {fileID: 903905919412994650, guid: a3bfb71c2b80df84aa062e51710a58a0, type: 3}
+  bullet: {fileID: 4160621213767880556, guid: 1ac764eecbf64804d8a98af39d55440f, type: 3}
   bulletSpawn: {fileID: 7443769061913958485}
 --- !u!1 &5167472844380602441
 GameObject:

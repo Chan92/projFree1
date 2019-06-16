@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour{
 	[Header("Basic")]
@@ -72,13 +73,16 @@ public class Health : MonoBehaviour{
 		if(dmgEffect)
 			Instantiate(dmgEffect, transform.position, Quaternion.identity);
 
-		StartCoroutine(Respawn());
+		StartCoroutine(Reset());
 	}
 
-	//respawns the char to the start
-	IEnumerator Respawn() {
+	//resets everything back to the start
+	public IEnumerator Reset() {
 		yield return new WaitForSeconds(respawnDelay);
-		transform.GetComponentInChildren<CharacterControl>().PlayerToStart();
+
+		SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+		Resources.UnloadUnusedAssets();
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
 	}
 
 	//gets the health info in the ui

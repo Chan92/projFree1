@@ -57,7 +57,9 @@ public class EnemyControl : MonoBehaviour{
 		if(movePoints != null) {
 			//if player is detected, go after the player else return to path
 			if(DetectionCheck()) {
-
+				//debugging code
+				if(this.gameObject.name == "Enemy1_f1-2")
+					print("test2: " + moveForwards);
 			} else {
 				if(Vector3.Distance(transform.position, curPoint.position) <= minDistanceToPoint) {
 					if (circularMovement) {
@@ -68,8 +70,15 @@ public class EnemyControl : MonoBehaviour{
 				}
 			}
 
-			if (moveForwards) {
+			//debugging code
+			if(this.gameObject.name == "Enemy1_f1-2")
+				print("moveForwards: " + moveForwards);
+
+			if(moveForwards) {
 				transform.position += transform.forward * (moveSpeed * Time.deltaTime);
+			} else {
+				print("stop");
+				transform.GetComponent<Rigidbody>().Sleep();
 			}
 		}
     }
@@ -150,18 +159,18 @@ public class EnemyControl : MonoBehaviour{
 
 	//Basic attack
 	protected virtual IEnumerator Attack() {
-		yield return new WaitForSeconds(0);
-		print(this.name + "_ attack");
 		yield return new WaitForSeconds(hitDelay);
-		print(this.name + "_ wait finish");
+		print(this.name + "_ attack");
 		offenseCoroutine = null;
 	}
 
 	//attack the player when the player is within hit range
 	protected void Offense() {
 		if (DetectionCheck()) {
+			//when the player is within range, stop the enemy from moving and start attacking
 			if (Vector3.Distance(transform.position, player.position) <= hitRange) {
 				moveForwards = false;
+
 				if (offenseCoroutine == null) {
 					offenseCoroutine = StartCoroutine(Attack());
 				}
@@ -192,7 +201,7 @@ public class EnemyControl : MonoBehaviour{
 	}
 
 	//sets the render of each object in the enemy
-	void SetRender(bool enable) {
+	protected void SetRender(bool enable) {
 		for (int i = 0; i < transform.childCount; i++) {
 			if (transform.GetChild(i).GetComponent<MeshRenderer>()) {
 				transform.GetChild(i).GetComponent<MeshRenderer>().enabled = enable;

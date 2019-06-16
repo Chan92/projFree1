@@ -12,7 +12,9 @@ public class CharacterSkills : MonoBehaviour {
 	public KeyCode openDoorKey;
 	public GameObject plankHint;
 	public GameObject plankPlaceHint;
+	public GameObject pressbuttonHint;
 	public GameObject doorHint;
+	public GameObject doorpower;
 	public GameObject keyCard;
 	private bool doorlock1 = false;
 	private bool doorlock2 = false;
@@ -21,7 +23,9 @@ public class CharacterSkills : MonoBehaviour {
 		keyCard.SetActive(false);
 		plankHint.SetActive(false);
 		plankPlaceHint.SetActive(false);
+		pressbuttonHint.SetActive(false);
 		doorHint.SetActive(false);
+		doorpower.SetActive(false);
 	}
 
 	private void OnTriggerStay(Collider other) {
@@ -69,8 +73,16 @@ public class CharacterSkills : MonoBehaviour {
 		}
 
 		//press button to open exit door
-		if(Input.GetKeyDown(openDoorKey) && other.tag == "Button") {
-			doorlock2 = true;
+		if(other.tag == "Button") {
+			if(!doorlock2) {
+				pressbuttonHint.SetActive(true);
+				pressbuttonHint.GetComponentInChildren<Text>().text = "Press '" + openDoorKey + "' to switch the power on.";
+			}
+
+			if(Input.GetKeyDown(openDoorKey)) {	
+				doorlock2 = true;
+				doorpower.SetActive(true);
+			}
 		}
 
 		//door interaction 1 (need cardkey)
@@ -105,6 +117,11 @@ public class CharacterSkills : MonoBehaviour {
 
 	//closes the door 
 	private void OnTriggerExit(Collider other) {
+		if(other.tag == "Button") {
+			pressbuttonHint.SetActive(false);
+			doorpower.SetActive(false);
+		}
+
 		if(other.tag == "Plank") {
 			plankHint.SetActive(false);
 		}
