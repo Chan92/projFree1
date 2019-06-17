@@ -56,11 +56,7 @@ public class EnemyControl : MonoBehaviour{
     protected void Movement(){
 		if(movePoints != null) {
 			//if player is detected, go after the player else return to path
-			if(DetectionCheck()) {
-				//debugging code
-				if(this.gameObject.name == "Enemy1_f1-2")
-					print("test2: " + moveForwards);
-			} else {
+			if(!DetectionCheck()) {
 				if(Vector3.Distance(transform.position, curPoint.position) <= minDistanceToPoint) {
 					if (circularMovement) {
 						PatrolDirection(PointIdCirular());
@@ -70,15 +66,8 @@ public class EnemyControl : MonoBehaviour{
 				}
 			}
 
-			//debugging code
-			if(this.gameObject.name == "Enemy1_f1-2")
-				print("moveForwards: " + moveForwards);
-
 			if(moveForwards) {
 				transform.position += transform.forward * (moveSpeed * Time.deltaTime);
-			} else {
-				print("stop");
-				transform.GetComponent<Rigidbody>().Sleep();
 			}
 		}
     }
@@ -148,6 +137,7 @@ public class EnemyControl : MonoBehaviour{
 
 		if(offenseCoroutine != null) {
 			StopCoroutine(offenseCoroutine);
+			offenseCoroutine = null;
 		}
 
 		Vector3 lookdir = curPoint.position;
@@ -190,13 +180,11 @@ public class EnemyControl : MonoBehaviour{
 	//disables the enemy when its aboven the player 
 	protected bool Invisibility() {
 		if (player.localPosition.y < transform.localPosition.y - invisibleOffset) {
-			moveForwards = false;
 			SetRender(false);
 			return true;
 		}
 
 		SetRender(true);
-		moveForwards = true;
 		return false;
 	}
 
