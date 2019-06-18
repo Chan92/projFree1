@@ -30,6 +30,7 @@ public class EnemyControl : MonoBehaviour{
 	public float hitDamage = 10;
 	public float hitDelay = 3;
 	protected Coroutine offenseCoroutine;
+	protected int attackLayer;
 
 	[Header("Effects")]
 	public Animator anim;
@@ -40,7 +41,9 @@ public class EnemyControl : MonoBehaviour{
 
 
 	void Awake(){
-        MovePoints();
+		attackLayer = (1 << LayerMask.NameToLayer("EnemyAttack"));
+		attackLayer = ~attackLayer;
+		MovePoints();
 		player = GameObject.FindGameObjectWithTag("Player").transform.root;
 	}
 
@@ -122,7 +125,7 @@ public class EnemyControl : MonoBehaviour{
 		Vector3 rayDir = player.position - transform.position;
 
 		Debug.DrawRay(transform.position, rayDir.normalized * detectDistance, Color.red);
-		if(Physics.Raycast(transform.position, rayDir.normalized, out hit, detectDistance)) {
+		if(Physics.Raycast(transform.position, rayDir.normalized, out hit, detectDistance, attackLayer)) {
 			if(hit.transform.tag == "Player") {
 				float angle = Mathf.Abs(Vector3.Angle(transform.forward, player.position - transform.position));
 				if(angle < detectAngle) {					

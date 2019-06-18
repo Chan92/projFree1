@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2290079684235273316}
   - component: {fileID: 6992249920538760830}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bullet Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 7956941945917892367}
   - component: {fileID: 4914021535862431697}
   - component: {fileID: 1454794901948238551}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ElectricBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4785,7 +4785,7 @@ ParticleSystem:
 --- !u!199 &1454794901948238551
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4855,7 +4855,7 @@ GameObject:
   - component: {fileID: 181431522271177027}
   - component: {fileID: 7343918650944781000}
   - component: {fileID: 6221559421093806828}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ElectricBullet (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9538,7 +9538,7 @@ ParticleSystem:
 --- !u!199 &6221559421093806828
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9607,7 +9607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2558445176195948736}
   - component: {fileID: 7075806925966952302}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bullet Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9698,7 +9698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5398974352252810818}
   - component: {fileID: 8328912128125014470}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bullet Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9791,7 +9791,7 @@ GameObject:
   - component: {fileID: 3373268178300311184}
   - component: {fileID: 4215752412965585430}
   - component: {fileID: 1396770302888891267}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9858,8 +9858,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitDmg: 0
-  bulletLife: 0.5
-  bulletSpeed: 5
+  bulletLife: 1
+  bulletSpeed: 15
+  player: {fileID: 0}
 --- !u!1 &4480341883710979844
 GameObject:
   m_ObjectHideFlags: 0
@@ -9871,7 +9872,7 @@ GameObject:
   - component: {fileID: 4116652744475188970}
   - component: {fileID: 7391730129849171242}
   - component: {fileID: 7704216927104647168}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ElectricBullet (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14554,7 +14555,7 @@ ParticleSystem:
 --- !u!199 &7704216927104647168
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14623,7 +14624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7651621657058826205}
   - component: {fileID: 5512529298539578408}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bullet Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14715,7 +14716,7 @@ GameObject:
   - component: {fileID: 1533482857257413537}
   - component: {fileID: 4725166510260124923}
   - component: {fileID: 2380531328095639682}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ElectricBullet (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19398,7 +19399,7 @@ ParticleSystem:
 --- !u!199 &2380531328095639682
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

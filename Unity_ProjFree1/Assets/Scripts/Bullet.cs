@@ -7,19 +7,18 @@ public class Bullet : MonoBehaviour {
 	public float bulletLife = 0.5f;
 	public float bulletSpeed = 5;
 
-	private Rigidbody rb;
-
+	public Transform player;
+	private Vector3 direction;
 	private void Start() {
-		rb = transform.GetComponent<Rigidbody>();
 		Destroy(gameObject, bulletLife);
+		direction = Vector3.Normalize(player.position - transform.position);
 	}
 
 	void Update() {
-		//transform.Translate(transform.forward * bulletSpeed * Time.deltaTime);
-		rb.velocity = transform.forward * bulletSpeed * Time.deltaTime;
+		transform.Translate(direction * bulletSpeed * Time.deltaTime, Space.Self);
 	}
 
-	private void OnCollisionEnter(Collision other) {
+	private void OnTriggerEnter(Collider other) {
 		if(other.transform.root.tag == "Player") {
 			Health hp = other.transform.root.GetComponent<Health>();
 
