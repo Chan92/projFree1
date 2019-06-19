@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour{
@@ -42,8 +43,13 @@ public class MenuManager : MonoBehaviour{
 	public Button prevButton;
 	private bool canNextBt;
 	private bool canPrevBt;
-	
-    void Start(){	
+
+	[Header("Effects")]
+	public AudioSource soundObj;
+	public AudioClip hoverSound;
+	public AudioClip clickSound;
+
+	void Start(){	
 		StateSwitch();
 		CheckDialogButtons();
 	}
@@ -109,7 +115,6 @@ public class MenuManager : MonoBehaviour{
 	}
 
 	void ButtonCheck() {
-		print("update");
 		//exit the game when in start or end menu and toggles pause
 		if(Input.GetKeyDown(exitKey)) {
 			if (playState == PlayState.StartMenu || playState == PlayState.EndMenu) {
@@ -136,6 +141,7 @@ public class MenuManager : MonoBehaviour{
 		} else if(Input.GetKeyDown(prevKey) && canPrevBt) {
 			SwitchDialog(-1);
 		}
+		
 	}
 
 	void StateSwitch() {
@@ -159,26 +165,32 @@ public class MenuManager : MonoBehaviour{
 		menuObj.SetActive(true);
 		Time.timeScale = 0;
 		startButton.text = "Start";
+		startButton.fontSize = 23;
 		returnButton.text = "Exit";
 
+		SetSelected(startButton.transform.parent.gameObject);
 		GetDialog(introSprites, introStrings);
 	}
 
 	void PauseMenu() {
 		menuObj.SetActive(true);
 		Time.timeScale = 0;
-		startButton.text = "StartMenu";
+		startButton.text = "Start Menu";
+		startButton.fontSize = 18;
 		returnButton.text = "Return";
 
+		SetSelected(returnButton.transform.parent.gameObject);
 		GetDialog(introSprites, introStrings);
 	}
 
 	void EndMenu() {
 		menuObj.SetActive(true);
 		Time.timeScale = 0;
-		startButton.text = "StartMenu";
+		startButton.text = "Start Menu";
+		startButton.fontSize = 18;
 		returnButton.text = "Exit";
 
+		SetSelected(startButton.transform.parent.gameObject);
 		dialogId = 0;
 		GetDialog(outroSprites, outroStrings);
 	}
@@ -191,12 +203,34 @@ public class MenuManager : MonoBehaviour{
 		dialogText.text = dialogStrings[dialogId];
 	}
 
-	void GetOutroDialog() { 
-}
+	void SetSelected(GameObject button) {
+		EventSystem es = EventSystem.current;
+		es.SetSelectedGameObject(null);
+		es.firstSelectedGameObject = button;
+		es.SetSelectedGameObject(button);
+	}
 
 	//in gameplay
 	void NoMenu() {
 		menuObj.SetActive(false);
 		Time.timeScale = 1;
+	}
+
+	public void OnSelect(GameObject glow) {
+		glow.SetActive(true);
+	}
+
+	public void OnDeselect(GameObject glow) {
+		glow.SetActive(false);
+	}
+
+	public void OnHover() {
+		if (soundObj && hoverSound)
+			soundObj.PlayOneShot(hoverSound);
+	}
+
+	public void OnClick() {
+		if(soundObj && clickSound)
+			soundObj.PlayOneShot(clickSound);
 	}
 }
