@@ -1,32 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class DoorAnimation : MonoBehaviour
 {
     public Animator anim;
-
-    // Start is called before the first frame update
+    bool isOpen = false;
+    AudioSource SoundDoor;
+    public GameObject keycard;
+    
     void Start()
     {
+        SoundDoor = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !isOpen && keycard.activeSelf)
         {
-            print("Euj");
-        }/*
-        // Change the cube color to green.
-        MeshRenderer meshRend = GetComponent<MeshRenderer>();
-        meshRend.material.color = Color.green;
-        Debug.Log(other.name);*/
+            isOpen = true;
+            SoundDoor.Play(0);
+            anim.Play("DoorOpen", -1, float.NegativeInfinity);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player" && isOpen && keycard.activeSelf)
+        {
+            isOpen = false;
+            SoundDoor.Play(0);
+            anim.Play("DoorClose", -1, float.NegativeInfinity);
+        }
     }
 }
