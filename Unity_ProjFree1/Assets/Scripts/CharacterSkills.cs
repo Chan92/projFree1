@@ -69,6 +69,7 @@ public class CharacterSkills : MonoBehaviour {
 				keyCard.SetActive(true);
 				doorlock1 = true;
 				Destroy(other.gameObject);
+                PlaySound("GotKey");
 			}
 		}
 
@@ -114,6 +115,11 @@ public class CharacterSkills : MonoBehaviour {
 			door.transform.GetChild(0).GetComponent<BoxCollider>().enabled = false;
 		}
 	}
+
+    void PlaySound(string sound)
+    {
+        GetComponent<AudioManager>().playSound(sound);
+    }
 
 	//closes the door 
 	private void OnTriggerExit(Collider other) {
