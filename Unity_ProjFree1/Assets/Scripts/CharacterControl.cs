@@ -6,6 +6,7 @@ public class CharacterControl : MonoBehaviour{
 	public bool showDebugging = false;
 	public bool startOnStart = true;
 	public Transform startPos;
+	private EnemyControl[] ec;
 
 	[Header("Basic")]
 	public float moveSpeedSneak = 5f;
@@ -26,6 +27,7 @@ public class CharacterControl : MonoBehaviour{
 	private int enemyLayer;
 
 	private void Awake() {
+		ec = GameObject.FindObjectsOfType<EnemyControl>();
 		wallLayer = LayerMask.NameToLayer("Wall");
 		fwallLayer = LayerMask.NameToLayer("Frontwall");
 		enemyLayer = LayerMask.NameToLayer("Enemy");
@@ -66,10 +68,22 @@ public class CharacterControl : MonoBehaviour{
 	//toggles sneaking, walking and running move speed
 	private float MoveSpeed() {
 		if(Input.GetButton("Sneak")) {
+			for(int i = 0; i < ec.Length; i++) {
+				ec[i].detectDistance = ec[i].detectDistanceNear;
+				ec[i].detectAngle = ec[i].detectAngleNear;
+			}
 			return moveSpeedSneak;
-		} else if(Input.GetButton("Run")) {
+		} else if(Input.GetButton("Run") && showDebugging) {
+			for(int i = 0; i < ec.Length; i++) {
+				ec[i].detectDistance = ec[i].detectDistanceFar;
+				ec[i].detectAngle = ec[i].detectAngleFar;
+			}
 			return moveSpeedRun;
 		} else {
+			for(int i = 0; i < ec.Length; i++) {
+				ec[i].detectDistance = ec[i].detectDistanceFar;
+				ec[i].detectAngle = ec[i].detectAngleFar;
+			}
 			return moveSpeedWalk;
 		}
 	}

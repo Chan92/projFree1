@@ -16,8 +16,16 @@ public class EnemyControl : MonoBehaviour{
 	protected bool death = false;	
 	
 	[Header("PlayerDetection")]
-    public float detectDistance = 5;
-    public float detectAngle = 45;
+	public float detectDistanceFar = 8;
+	public float detectDistanceNear = 5;
+
+	public float detectAngleFar = 45;
+	public float detectAngleNear = 45;
+
+	[HideInInspector]
+	public float detectDistance = 8;
+	[HideInInspector]
+	public float detectAngle = 45;
 	public float invisibleOffset = 3;
 	public MeshRenderer cone;
 	public Material coneNormal;
@@ -41,6 +49,8 @@ public class EnemyControl : MonoBehaviour{
 
 
 	void Awake(){
+		detectDistance = detectDistanceFar;
+		detectAngle = detectAngleFar;
 		attackLayer = (1 << LayerMask.NameToLayer("EnemyAttack"));
 		attackLayer = ~attackLayer;
 		MovePoints();

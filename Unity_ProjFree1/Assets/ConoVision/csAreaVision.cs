@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 public class csAreaVision : MonoBehaviour {
 
-	public int angulo = 45;
-	public int rango  = 5;
+	float angulo = 45;
+	float rango  = 5;
 
+	RobotRanged rr;
 	MeshFilter meshFilter;
 
 	Vector3 oldPosition;
@@ -73,12 +74,10 @@ public class csAreaVision : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		meshFilter = this.gameObject.GetComponent<MeshFilter>();
-		meshFilter.mesh = Cono();
-		initialPosition = meshFilter.mesh.vertices;
-		initialUV = meshFilter.mesh.uv;
-	
+		rr = transform.GetComponentInParent<RobotRanged>();
+		rango = rr.detectDistance;
+		angulo = rr.detectAngle;		
+		DrawConeMesh();
 	}
 
 	Mesh areaMesh(Mesh mesh){
@@ -118,12 +117,10 @@ public class csAreaVision : MonoBehaviour {
 		_mesh.triangles = mesh.triangles;
 
 		return _mesh;
-
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
 		if(oldPosition!=transform.position || oldRotation!=transform.rotation || oldScale != transform.localScale){
 
 			oldPosition = transform.position;
@@ -133,7 +130,19 @@ public class csAreaVision : MonoBehaviour {
 			meshFilter.mesh = areaMesh(meshFilter.mesh);
 
 		}
-	
+
+		if(rango != rr.detectDistance || angulo != rr.detectAngle) {
+			rango = rr.detectDistance;
+			angulo = rr.detectAngle;
+			DrawConeMesh();
+		}
 	}
 
+	void DrawConeMesh() {
+		transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, (-90f + (angulo * 0.5f)), transform.localEulerAngles.z);
+		meshFilter = this.gameObject.GetComponent<MeshFilter>();
+		meshFilter.mesh = Cono();
+		initialPosition = meshFilter.mesh.vertices;
+		initialUV = meshFilter.mesh.uv;
+	}
 }
