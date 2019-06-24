@@ -11,6 +11,7 @@ TagManager:
   - Button
   - Door2
   - Box
+  - IndoorStart
   layers:
   - Default
   - TransparentFX

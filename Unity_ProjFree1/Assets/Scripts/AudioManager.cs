@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
         }
 
+		/* //this part of the code breaks the respawn after death
         if (Instance == null)
         {
             Instance = this;
@@ -30,6 +31,7 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+		*/
     }
 
     private void Start()

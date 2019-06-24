@@ -104,7 +104,10 @@ public class CharacterSkills : MonoBehaviour {
 			}
 
 			if(autoDoor || (!autoDoor && Input.GetKeyDown(openDoorKey))) {
-				DoorInteraction(doorlock2, other);
+				//DoorInteraction(doorlock2, other);
+				if(doorlock2) {
+					GameObject.FindObjectOfType<MenuManager>().EndGame();
+				}
 			}
 		}
 	}

@@ -296,80 +296,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!1 &2058319110
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2058319111}
-  - component: {fileID: 2058319112}
-  - component: {fileID: 2058319113}
-  m_Layer: 5
-  m_Name: BetaCutscene
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2058319111
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058319110}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5651265464703672705}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -43, y: -79.8}
-  m_SizeDelta: {x: 695.4, y: 259.3}
-  m_Pivot: {x: 0.5, y: 1}
---- !u!222 &2058319112
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058319110}
-  m_CullTransparentMesh: 0
---- !u!114 &2058319113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058319110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 80a472a7c7577644abcaf5d41d6a0de8, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
 --- !u!1 &5651265464500884358
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,7 +692,6 @@ RectTransform:
   - {fileID: 5651265464862679317}
   - {fileID: 5651265464665944641}
   - {fileID: 1592753253087882064}
-  - {fileID: 2058319111}
   m_Father: {fileID: 5651265465196999068}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1103,7 +1028,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -162.7, y: 45}
-  m_SizeDelta: {x: 100, y: 50}
+  m_SizeDelta: {x: 120, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &5651265465059441283
 CanvasRenderer:
@@ -1266,17 +1191,19 @@ MonoBehaviour:
   nextKey: 275
   prevKey: 276
   menuObj: {fileID: 5651265464703672706}
-  dialogImage: {fileID: 2058319113}
+  dialogImage: {fileID: 5651265466044598517}
   introSprites:
-  - {fileID: 21300000, guid: b77398a2597d8184ea814c5292de86e2, type: 3}
-  - {fileID: 21300000, guid: a5fd8fd55b90ead4ca280a3b2cfbefdb, type: 3}
-  - {fileID: 21300000, guid: b55be6baca2e11c4aac65f04fd6271d0, type: 3}
+  - {fileID: 21300000, guid: c13bdea10e1b2474a9a46f987ccde35d, type: 3}
+  - {fileID: 21300000, guid: 38e9b6d6c958fa34db5d37da21ba18d8, type: 3}
+  - {fileID: 21300000, guid: 3d2cc74049a4f934fa0a47cca61a2574, type: 3}
+  - {fileID: 21300000, guid: 0aebb4d9b32c7904e98962923c4f58c9, type: 3}
   outroSprites: []
   dialogText: {fileID: 5651265465961980230}
   introStrings:
   - test1
   - test2
   - test3
+  - test4
   outroStrings: []
   startButton: {fileID: 5651265464500884356}
   returnButton: {fileID: 5651265464827220629}
@@ -1379,8 +1306,8 @@ MonoBehaviour:
     m_Mode: 4
     m_SelectOnUp: {fileID: 5651265466316250358}
     m_SelectOnDown: {fileID: 5651265466316250358}
-    m_SelectOnLeft: {fileID: 5651265464862679316}
-    m_SelectOnRight: {fileID: 5651265464694720387}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1819,10 +1746,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
-    m_SelectOnUp: {fileID: 5651265464694720387}
+    m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 5651265465622493820}
-    m_SelectOnLeft: {fileID: 5651265464862679316}
-    m_SelectOnRight: {fileID: 5651265464694720387}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}

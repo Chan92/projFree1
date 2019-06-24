@@ -49,9 +49,11 @@ public class MenuManager : MonoBehaviour{
 	public AudioClip hoverSound;
 	public AudioClip clickSound;
 
-	void Start(){	
-		StateSwitch();
-		CheckDialogButtons();
+	void Start(){
+		if(Manager.firstLoad == true) {
+			StateSwitch();
+			CheckDialogButtons();
+		}
 	}
 
     void Update(){
