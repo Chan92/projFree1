@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour{
 	private enum PlayState {
@@ -64,6 +65,9 @@ public class MenuManager : MonoBehaviour{
 		if(playState == PlayState.StartMenu) {
 			StartGame();
 		} else if (playState == PlayState.PauseMenu || playState == PlayState.EndMenu) {
+			SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+			Resources.UnloadUnusedAssets();
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
 			ToStartMenu();
 		}
 	}
