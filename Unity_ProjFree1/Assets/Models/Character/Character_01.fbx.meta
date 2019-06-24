@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: afb9b1bb91b6380438b81c804f2f0729
+guid: a7dbf8905e41e0447ae9688e6c6a3392
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: 1827226128182048838
-    second: Idle_Animation
+      74: -203655887218126122
+    second: mixamo.com
   externalObjects: {}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle_Animation
-      takeName: Take 001
-      internalID: 1827226128182048838
-      firstFrame: 1
-      lastFrame: 240
+      name: mixamo.com
+      takeName: mixamo.com
+      internalID: -203655887218126122
+      firstFrame: 0
+      lastFrame: 2
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
