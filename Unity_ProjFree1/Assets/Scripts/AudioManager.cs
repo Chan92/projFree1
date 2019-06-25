@@ -17,21 +17,8 @@ public class AudioManager : MonoBehaviour
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
-            //s.source.outputAudioMixerGroup = s.mixer;
             s.source.loop = s.loop;
         }
-
-		/* //this part of the code breaks the respawn after death
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-		*/
     }
 
     private void Start()
@@ -59,6 +46,19 @@ public class AudioManager : MonoBehaviour
         if(s != null)
         {
             s.source.Play();
+        }
+        else
+        {
+            Debug.LogError("ERROR: Sound " + name + " not found");
+        }
+    }
+
+    public void stopSound(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s != null)
+        {
+            s.source.Stop();
         }
         else
         {

@@ -106,6 +106,26 @@ public class MenuManager : MonoBehaviour{
 			return;
 		}
 
+        switch (dialogId)
+        {
+            case 0:
+                GetComponent<AudioManager>().playSound("story1");
+                break;
+            case 1:
+                //GetComponent<AudioManager>().stopSound("story1");
+                print("playsound");
+                GetComponent<AudioManager>().playSound("story2");
+                break;
+            case 2:
+                GetComponent<AudioManager>().playSound("story3");
+                break;
+            case 3:
+                GetComponent<AudioManager>().playSound("story4");
+                break;
+            default:
+                break;
+        }
+
 		dialogImage.sprite = dialogSprites[dialogId];
 		dialogText.text = dialogStrings[dialogId];
 
