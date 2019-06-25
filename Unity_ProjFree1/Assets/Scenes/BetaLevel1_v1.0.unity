@@ -4090,7 +4090,7 @@ Transform:
   m_LocalScale: {x: 0.4966358, y: 0.22932011, z: 1.2755305}
   m_Children: []
   m_Father: {fileID: 1877807892}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &841060619
 BoxCollider:
@@ -4394,6 +4394,81 @@ Transform:
   m_Father: {fileID: 1661272113}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &875428943
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2464197310464005911}
+    m_Modifications:
+    - target: {fileID: 2574710220359550233, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_Name
+      value: Sparkles
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3310c05b63991b54fb5163cce1ce6382, type: 3}
+--- !u!4 &875428944 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+    type: 3}
+  m_PrefabInstance: {fileID: 875428943}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &876145185
 GameObject:
   m_ObjectHideFlags: 0
@@ -4932,6 +5007,96 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6450004268333781125, guid: 3051820453a3f404aadecc7be4f0f6bc,
     type: 3}
   m_PrefabInstance: {fileID: 1383445353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &985158534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6557578090817619504}
+    m_Modifications:
+    - target: {fileID: 2574710220359550233, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_Name
+      value: Sparkles
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.41915706
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9079138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3310c05b63991b54fb5163cce1ce6382, type: 3}
+--- !u!4 &985158535 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2574710220359550232, guid: 3310c05b63991b54fb5163cce1ce6382,
+    type: 3}
+  m_PrefabInstance: {fileID: 985158534}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &999050187
 PrefabInstance:
@@ -7453,22 +7618,77 @@ PrefabInstance:
     - target: {fileID: 5651265465196999064, guid: 4b9edd58e7696ca4a92919e86feda7a2,
         type: 3}
       propertyPath: introStrings.Array.data[0]
-      value: 
+      value: "When I was younger my parents attempted to flee our situation, in search
+        of a better life for me and my little brother. They didn\u2019t make it very
+        far, however. In the crash, I lost both of them, as well as my arm, but as
+        per a miracle, my little brother was unharmed. Forced to take care of ourselves,
+        I used our environment, and what little resources were available to me to
+        craft a replacement arm."
       objectReference: {fileID: 0}
     - target: {fileID: 5651265465196999064, guid: 4b9edd58e7696ca4a92919e86feda7a2,
         type: 3}
       propertyPath: introStrings.Array.data[1]
-      value: 
+      value: "As time went by, I got better at the scrapping of robots that patrolled
+        our area, and we got by using my newfound talents.The parts I could use for
+        myself were put into improvements of my arm, the others were sold or traded
+        for food and clothes. All was well, until\u2026 "
       objectReference: {fileID: 0}
     - target: {fileID: 5651265465196999064, guid: 4b9edd58e7696ca4a92919e86feda7a2,
         type: 3}
       propertyPath: introStrings.Array.data[2]
-      value: 
+      value: "My little brother fell ill. I had no idea what disease he was suffering
+        from, but I knew there was no way for me to save him. Until\u2026 I received
+        an offer I could not refuse. A large corporation had heard of my services,
+        and in return for my brother\u2019s medicine, I would wade into a robot infested
+        city to collect information on the robots still roaming around. I promised
+        my little brother I\u2019d definitely come back\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 5651265465196999064, guid: 4b9edd58e7696ca4a92919e86feda7a2,
         type: 3}
       propertyPath: introStrings.Array.data[3]
-      value: 
+      value: "\u2026 And so I braved the dangerous journey, into the fallen factory,
+        and towards the city humanity once left behind. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651265465196999064, guid: 4b9edd58e7696ca4a92919e86feda7a2,
+        type: 3}
+      propertyPath: outroStrings.Array.data[0]
+      value: "With the keycard I was able to unlock the door that led to the city.
+        A red light shone through the cracks of the door as it opened, and I took
+        a deep breath. Whatever I would find on the other end of that door, I would
+        have to face it. My little brother\u2019s life was on the line after all!! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651265465196999064, guid: 4b9edd58e7696ca4a92919e86feda7a2,
+        type: 3}
+      propertyPath: outroStrings.Array.data[1]
+      value: 'And so I bravely ventured outside, where the ruins of a once city greeted
+        me. The red light came from the robots that had taken over the human wasteland,
+        and would definitely attack me if they noticed me the way I did them. I braced
+        myself, and stepped further into the city.  My journey, was only just beginning. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651265465961980230, guid: 4b9edd58e7696ca4a92919e86feda7a2,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651265465961980230, guid: 4b9edd58e7696ca4a92919e86feda7a2,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651265465961980230, guid: 4b9edd58e7696ca4a92919e86feda7a2,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651265465961980231, guid: 4b9edd58e7696ca4a92919e86feda7a2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 126.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651265465961980231, guid: 4b9edd58e7696ca4a92919e86feda7a2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 45.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b9edd58e7696ca4a92919e86feda7a2, type: 3}
@@ -9803,8 +10023,8 @@ Transform:
   - {fileID: 4191869899636411637}
   - {fileID: 5723600106230335044}
   - {fileID: 3329365373187558580}
-  - {fileID: 5006512736534052748}
   - {fileID: 841060618}
+  - {fileID: 5006512736534052748}
   - {fileID: 1448684805}
   m_Father: {fileID: 5006512736732822015}
   m_RootOrder: 0
@@ -12897,7 +13117,8 @@ Transform:
   m_LocalRotation: {x: -0.06337691, y: 0.7042609, z: 0.7042609, w: 0.06337691}
   m_LocalPosition: {x: 8.651727, y: -0.027376557, z: -15.111287}
   m_LocalScale: {x: 0.78843635, y: 0.7440381, z: 0.82293904}
-  m_Children: []
+  m_Children:
+  - {fileID: 875428944}
   m_Father: {fileID: 1877807892}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13203,7 +13424,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9172df51bd2a5e84e9ea27f1bcd70fad, type: 2}
+  - {fileID: 2100000, guid: 6e5c105cf94c20549843b87bd5a80aa2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14375,7 +14596,7 @@ PrefabInstance:
     - target: {fileID: 8071997316303500691, guid: f995118fd248bb844989ad1543861b14,
         type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 8071997316303500691, guid: f995118fd248bb844989ad1543861b14,
         type: 3}
@@ -16267,7 +16488,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9172df51bd2a5e84e9ea27f1bcd70fad, type: 2}
+  - {fileID: 2100000, guid: 6e5c105cf94c20549843b87bd5a80aa2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16426,7 +16647,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9172df51bd2a5e84e9ea27f1bcd70fad, type: 2}
+  - {fileID: 2100000, guid: 6e5c105cf94c20549843b87bd5a80aa2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16737,7 +16958,8 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.41915706, z: -0, w: 0.9079138}
   m_LocalPosition: {x: 9.39, y: -0.027376557, z: 14.88}
   m_LocalScale: {x: 8, y: 8, z: 8}
-  m_Children: []
+  m_Children:
+  - {fileID: 985158535}
   m_Father: {fileID: 1877807892}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 49.563004, z: 0}
